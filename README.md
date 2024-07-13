@@ -12,7 +12,7 @@ Notes:
 
 - zephyr:
   
-  - Should work out of the box, I usually define the board in the project's cmakelists.txt with set(BOARD nucleo-f446re) as an example
+  - The configurations needs an environment script like the one provided, replace the path \$HOME/.zephyr_setup with the path to your script location, I usually define the board in the project's cmakelists.txt with set(BOARD nucleo-f446re) as an example
 
 - nuttx:
   
