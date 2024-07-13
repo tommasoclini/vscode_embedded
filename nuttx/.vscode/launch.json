@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cppdbg openocd(stlink f4) + gdb nuttx",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/nuttx/nuttx",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb-multiarch",
+      "debugServerPath": "openocd",
+      "debugServerArgs": "-f interface/stlink.cfg -f target/stm32f4x.cfg -c \"init\" -c \"reset init\"",
+      "miDebuggerServerAddress": ":3333",
+      "useExtendedRemote": true,
+      "serverLaunchTimeout": 5000,
+      "serverStarted": "3333",
+      "filterStderr": true,
+      "filterStdout": false
+    },
+    {
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceFolder}/nuttx/nuttx",
+      "name": "cortex debug openocd nuttx",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "serverArgs": [
+        "-c init",
+        "-c reset init"
+      ]
+    }
+  ]
+}

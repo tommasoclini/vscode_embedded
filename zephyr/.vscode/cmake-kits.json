@@ -1,0 +1,6 @@
+[
+    {
+        "name": "zephyr",
+        "environmentSetupScript": "$HOME/.zephyr_setup"
+    }
+]

@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "microhobby.nuttx-helpers",
+        "marus25.cortex-debug",
+        "ms-vscode.cpptools"
+    ]
+}
